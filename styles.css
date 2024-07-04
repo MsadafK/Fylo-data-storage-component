@@ -1,0 +1,219 @@
+body {
+  background-color: hsl(229, 57%, 11%);
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  color: hsl(229, 7%, 55%);
+}
+
+.background-image {
+  position: absolute;
+  bottom: 0px;
+  height: 50%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5em;
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 60%;
+}
+
+.left {
+  background-color: hsl(228, 56%, 26%);
+  padding: 1.5em;
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+}
+
+input {
+  margin-top: 1em;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.below-data {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(243, 100%, 93%);
+}
+
+.inside-left {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  margin-right: 6em;
+}
+
+.inside-left svg {
+  padding: 0.5em;
+  /* margin-right: 0.5em; */
+  border-radius: 5px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 5px;
+}
+
+.right {
+  position: relative;
+  padding: 1.5em;
+  width: 100%;
+  border-radius: 10px;
+  background-color: hsl(228, 56%, 26%);
+}
+
+.progress {
+  height: 15px;
+  background-color: hsl(229, 57%, 11%);
+  margin-top: 1em;
+  border-radius: 20px;
+  padding: 0.15em;
+}
+
+.level {
+  height: 100%;
+  width: 81.5%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3px;
+}
+
+.level > div {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.below-data p {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+span {
+  color: hsl(243, 100%, 93%);
+  font-weight: 700;
+}
+
+.data-tag > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 0.1em;
+  background-color: #fff;
+  color: black;
+  margin-bottom: 0.25em;
+  font-size: 2.25rem;
+  border-radius: 5px;
+  font-weight: 700;
+  transform: translate(-15%, -50%);
+  z-index: 1;
+  /* border: 1px solid red; */
+  /* position: relative; */
+}
+
+.design {
+  height: 30px;
+  width: 20%;
+  position: absolute;
+  right: 1.3em;
+  top: 1em;
+  background-color: white;
+  /* position: relative; */
+}
+
+.design > div {
+  position: absolute;
+  right: 1em;
+  transform: skewX(45deg);
+  background-color: hsl(228, 56%, 26%);
+  width: 100%;
+  height: 100%;
+}
+
+.data-tag-small-text {
+  align-self: center;
+  color: hsl(229, 7%, 55%);
+  font-size: small;
+  font-weight: 400;
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+@media (max-width: 376px) {
+  /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
+  .background-image {
+    content: url("./images/bg-mobile.png");
+    width: 100%;
+    height: 100vh;
+  }
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .right,
+  .left {
+    width: 85%;
+  }
+
+  .right {
+    padding-bottom: 2em;
+    /* border: 5px solid red; */
+  }
+
+  .data-tag > div {
+    margin-top: 0.5em;
+    border: 1px solid blue;
+
+    width: 40%;
+    /* bottom: 10%; */
+    top: 86%;
+    left: 50%;
+    /* bottom: 10px; */
+    transform: translate(-50%, -50%);
+  }
+  .design {
+    display: none;
+  }
+  .inside-left {
+    justify-content: flex-start;
+  }
+}
